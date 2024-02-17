@@ -1,0 +1,1 @@
+/home/nicolas/.config/i3/
