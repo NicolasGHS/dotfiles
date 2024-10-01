@@ -1,0 +1,24 @@
+
+[colors.normal]
+black = "#16161C"
+blue = "#25B2BC"
+cyan = "#21BFC2"
+green = "#27D796"
+magenta = "#B877DB"
+red = "#F43E5C"
+white = "#abb2bf"
+yellow = "#FAC29A"
+
+
+
+[colors.primary]
+background = "#1C1E26"
+foreground = "#bbc2cf"
+
+[colors.cursor]
+cursor = "#E95678"
+text = "CellBackground"
+
+[font]
+size = 9
+
