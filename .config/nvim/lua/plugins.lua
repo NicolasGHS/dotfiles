@@ -18,13 +18,20 @@ packer.startup(function(use)
     	config = function()
         	vim.g.vimwiki_list = {
             		{
-                	path = '/home/xx/Documents/singularityOffice/wiki',
+			path = "~/vimwiki",
                 	syntax = 'markdown',
                 	ext = '.md',
             		}
         	}
     	end
     }						
+    use {
+    	"windwp/nvim-autopairs", 	  				-- Autopairs
+    	event = "InsertEnter",
+    	config = function()
+        	require("nvim-autopairs").setup {}
+    	end
+}
     use("scrooloose/nerdtree")						-- NerdTree
     use {
   	'nvim-lualine/lualine.nvim',					-- LuaLine
