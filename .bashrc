@@ -31,3 +31,7 @@ alias dev="cd ~/Documents/dev"
 alias ll="ls -l --color=auto"
 alias v="nvim"
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+
+
+export PATH="$HOME/.config/emacs/bin:$PATH"
+
