@@ -31,7 +31,7 @@ alias dev="cd ~/Documents/dev"
 alias ll="ls -l --color=auto"
 alias v="nvim"
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-
+alias emacs="emacsclient -c -a 'emacs'"
 
 export PATH="$HOME/.config/emacs/bin:$PATH"
 
