@@ -203,5 +203,6 @@ gaps inner 7px
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh & 
 exec_always --no-startup-id feh --bg-fill ~/Pictures/space.jpeg 
+exec_always --no-startup-id xrandr --output HDMI-1 --right-of HDMI-2
 
 
