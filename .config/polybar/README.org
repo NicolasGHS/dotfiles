@@ -1,3 +1,13 @@
+#+title: Polybar Config
+#+PROPERTY: header-args :tangle config.ini
+
+* Table Of Contents :toc:
+- [[#polybar-settings][Polybar Settings]]
+- [[#colors][Colors]]
+- [[#modules][Modules]]
+
+* Polybar Settings
+#+begin_src conf
 ;==========================================================
 ;
 ;
@@ -43,7 +53,10 @@ separator-foreground = ${colors.disabled}
 
 ; font-0 = monospace;2
 font-0 = JetBrainsMono Nerd Font;2
+#+end_src
 
+* Colors
+#+begin_src conf
 [colors]
 background = #1C1E26
 background-alt = #1C1E26
@@ -52,6 +65,10 @@ primary = #E95678
 secondary = #25B2BC
 alert = #F43E5C
 disabled = #6C6F93
+#+end_src
+
+* Modules
+#+begin_src conf
 
 modules-left = xworkspaces xwindow
 modules-right = pulseaudio memory cpu wlan date battery
@@ -224,3 +241,4 @@ adapter = ACAD
 ;
 ; Default: 5
 poll-interval = 5
+#+end_src
