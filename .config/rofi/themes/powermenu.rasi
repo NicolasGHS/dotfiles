@@ -27,7 +27,7 @@ window {
     background-color:               #25B2BC;
     border:                         2px;
     border-color:                   #E95678;
-    border-radius:                  30px;
+    /*border-radius:                  10px;*/
     width:                          490px;   
     height:                         130px;          
     x-offset:                       -4;
@@ -54,6 +54,7 @@ element {
     orientation:                    horizontal;
     border-radius:                  100%;
     padding:                        11px;
+    width: 			    50px;
 }
 
 element-text {
@@ -63,6 +64,7 @@ element-text {
     horizontal-align:               0.5;
     vertical-align:                 0.5;
     margin:                         0px;
+    width: 			    25px;
 }
 
 element selected {
