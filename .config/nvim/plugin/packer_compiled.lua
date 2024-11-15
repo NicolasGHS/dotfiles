@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/nicog/.cache/nvim/packer_hererocks/2.1.1725453128/share/lua/5.1/?.lua;/home/nicog/.cache/nvim/packer_hererocks/2.1.1725453128/share/lua/5.1/?/init.lua;/home/nicog/.cache/nvim/packer_hererocks/2.1.1725453128/lib/luarocks/rocks-5.1/?.lua;/home/nicog/.cache/nvim/packer_hererocks/2.1.1725453128/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/nicog/.cache/nvim/packer_hererocks/2.1.1725453128/lib/lua/5.1/?.so"
+local package_path_str = "/home/nicog/.cache/nvim/packer_hererocks/2.1.1727870382/share/lua/5.1/?.lua;/home/nicog/.cache/nvim/packer_hererocks/2.1.1727870382/share/lua/5.1/?/init.lua;/home/nicog/.cache/nvim/packer_hererocks/2.1.1727870382/lib/luarocks/rocks-5.1/?.lua;/home/nicog/.cache/nvim/packer_hererocks/2.1.1727870382/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/nicog/.cache/nvim/packer_hererocks/2.1.1727870382/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -78,6 +78,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nicog/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
+  },
+  ["coc.nvim"] = {
+    loaded = true,
+    path = "/home/nicog/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    url = "https://github.com/neoclide/coc.nvim"
   },
   ["dashboard-nvim"] = {
     config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14dashboard\frequire\0" },
@@ -131,8 +136,18 @@ _G.packer_plugins = {
     path = "/home/nicog/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/home/nicog/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
+  },
+  ["vim-css-color"] = {
+    loaded = true,
+    path = "/home/nicog/.local/share/nvim/site/pack/packer/start/vim-css-color",
+    url = "https://github.com/ap/vim-css-color"
+  },
   vimwiki = {
-    config = { "\27LJ\2\n`\0\0\3\0\4\0\a6\0\0\0009\0\1\0004\1\3\0005\2\3\0>\2\1\1=\1\2\0K\0\1\0\1\0\3\bext\b.md\vsyntax\rmarkdown\tpath\14~/vimwiki\17vimwiki_list\6g\bvim\0" },
+    config = { "\27LJ\2\n`\0\0\3\0\4\0\a6\0\0\0009\0\1\0004\1\3\0005\2\3\0>\2\1\1=\1\2\0K\0\1\0\1\0\3\bext\b.md\tpath\14~/vimwiki\vsyntax\rmarkdown\17vimwiki_list\6g\bvim\0" },
     loaded = true,
     path = "/home/nicog/.local/share/nvim/site/pack/packer/start/vimwiki",
     url = "https://github.com/vimwiki/vimwiki"
@@ -142,7 +157,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: vimwiki
 time([[Config for vimwiki]], true)
-try_loadstring("\27LJ\2\n`\0\0\3\0\4\0\a6\0\0\0009\0\1\0004\1\3\0005\2\3\0>\2\1\1=\1\2\0K\0\1\0\1\0\3\bext\b.md\vsyntax\rmarkdown\tpath\14~/vimwiki\17vimwiki_list\6g\bvim\0", "config", "vimwiki")
+try_loadstring("\27LJ\2\n`\0\0\3\0\4\0\a6\0\0\0009\0\1\0004\1\3\0005\2\3\0>\2\1\1=\1\2\0K\0\1\0\1\0\3\bext\b.md\tpath\14~/vimwiki\vsyntax\rmarkdown\17vimwiki_list\6g\bvim\0", "config", "vimwiki")
 time([[Config for vimwiki]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]

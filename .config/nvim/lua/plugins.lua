@@ -31,12 +31,14 @@ packer.startup(function(use)
     	config = function()
         	require("nvim-autopairs").setup {}
     	end
-}
+    }
+    use("tpope/vim-commentary")						-- Commentary
     use("scrooloose/nerdtree")						-- NerdTree
     use {
   	'nvim-lualine/lualine.nvim',					-- LuaLine
   	requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
+    use {'neoclide/coc.nvim', branch = 'release'}			-- coc
     use {
   	'nvim-telescope/telescope.nvim', tag = '0.1.8',                 -- Telescope
 	-- or                            , branch = '0.1.x',
@@ -52,6 +54,8 @@ packer.startup(function(use)
   	end,
   	requires = {'nvim-tree/nvim-web-devicons'}
     }
+    use("ap/vim-css-color")						-- vim-css-color
+
     use { "catppuccin/nvim", as = "catppuccin" }			-- Catppuccin
     use {"akinsho/horizon.nvim", tag = "*"}				-- Horizon
 
