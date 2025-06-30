@@ -3,15 +3,15 @@
 DOTFILES_DIR=~/dotfiles
 CONFIG_DIR=~/.config
 
-# Loop over all dirs in dotfiles
+# Loop all dirs in dotfiles
 for dir in "$DOTFILES_DIR"/*/; do
-    # Haal de naam van de directory (bv. 'nvim')
+    # Get name from dir (bv. 'nvim')
     dir_name=$(basename "$dir")
     
-    # Volledig pad naar doel-symlink
+    # full path
     target="$CONFIG_DIR/$dir_name"
 
-    # Check of er al iets bestaat op de targetlocatie
+    # Check if exists
     if [ -L "$target" ]; then
         echo "Symlink already exists: $target"
     elif [ -d "$target" ]; then
