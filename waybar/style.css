@@ -5,6 +5,11 @@
   background: @base;
   border: 1px solid @overlay;
   font-family: Hack Nerd Font;
+  color: @text;
+}
+
+.module {
+		padding: 0 9px;
 }
 
 #memory {
@@ -12,5 +17,9 @@
 }
 
 #temperature {
+  color: @rose;
+}
+
+#clock {
   color: @rose;
 }
