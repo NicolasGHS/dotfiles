@@ -20,6 +20,24 @@ return {
     },
   },
   {
+    -- Obsidian
+    'obsidian-nvim/obsidian.nvim',
+    lazy = false,
+    version = '*', -- use latest release, remove to use latest commit
+    ft = 'markdown',
+    ---@module 'obsidian'
+    ---@type obsidian.config
+    opts = {
+      legacy_commands = false, -- this will be removed in the next major release
+      workspaces = {
+        {
+          name = 'notes',
+          path = '/Users/nicolas/Library/Mobile Documents/iCloud~md~obsidian/Documents/Notes',
+        },
+      },
+    },
+  },
+  {
     {
       'nvim-neorg/neorg',
       lazy = false,
@@ -57,6 +75,29 @@ return {
     -- },
   },
 
+  {
+    -- Solarized
+    'maxmx03/solarized.nvim',
+    lazy = false,
+    priority = 1000,
+    ---@type solarized.config
+    opts = {},
+    config = function(_, opts)
+      vim.o.termguicolors = true
+      vim.o.background = 'dark'
+      require('solarized').setup(opts)
+      -- vim.cmd.colorscheme 'solarized'
+      -- vim.cmd 'colorscheme solarized'
+    end,
+  },
+
+  -- Solarized Osaka
+  {
+    'craftzdog/solarized-osaka.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
   -- Gruvbox-material
   {
     'sainnhe/gruvbox-material',
