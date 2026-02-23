@@ -452,6 +452,7 @@ require('lazy').setup({
         -- },
         -- pickers = {}
         defaults = {
+          file_ignore_patterns = { 'node_modules/.*' },
           layout_strategy = 'horizontal',
           layout_config = {
             width = 0.95,
