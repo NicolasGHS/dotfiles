@@ -51,7 +51,31 @@ return {
     'rose-pine/neovim',
     name = 'rose-pine',
     config = function()
-      vim.cmd 'colorscheme rose-pine'
+      -- vim.cmd 'colorscheme rose-pine'
+    end,
+  },
+
+  {
+    'rebelot/kanagawa.nvim',
+    name = 'kanagawa',
+    config = function()
+      -- vim.cmd 'colorscheme kanagawa-dragon'
+    end,
+  },
+
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    config = function()
+      vim.cmd 'colorscheme catppuccin-mocha'
+    end,
+  },
+
+  {
+    'sainnhe/everforest',
+    name = 'everforest',
+    config = function()
+      -- vim.cmd 'colorscheme everforest'
     end,
   },
 
