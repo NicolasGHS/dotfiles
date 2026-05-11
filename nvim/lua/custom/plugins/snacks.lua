@@ -1,5 +1,4 @@
 return {
-  -- lazy.nvim
   {
     'folke/snacks.nvim',
     priority = 1000,
@@ -244,13 +243,6 @@ return {
           Snacks.picker.autocmds()
         end,
         desc = 'Autocmds',
-      },
-      {
-        '<leader>sb',
-        function()
-          Snacks.picker.lines()
-        end,
-        desc = 'Buffer Lines',
       },
       {
         '<leader>sc',
@@ -561,7 +553,6 @@ return {
       vim.api.nvim_create_autocmd('User', {
         pattern = 'VeryLazy',
         callback = function()
-          -- Setup some globals for debugging (lazy-loaded)
           _G.dd = function(...)
             Snacks.debug.inspect(...)
           end
@@ -569,7 +560,6 @@ return {
             Snacks.debug.backtrace()
           end
 
-          -- Override print to use snacks for `:=` command
           if vim.fn.has 'nvim-0.11' == 1 then
             vim._print = function(_, ...)
               dd(...)
@@ -578,7 +568,6 @@ return {
             vim.print = _G.dd
           end
 
-          -- Create some toggle mappings
           Snacks.toggle.option('spell', { name = 'Spelling' }):map '<leader>us'
           Snacks.toggle.option('wrap', { name = 'Wrap' }):map '<leader>uw'
           Snacks.toggle.option('relativenumber', { name = 'Relative Number' }):map '<leader>uL'
@@ -592,152 +581,6 @@ return {
           Snacks.toggle.dim():map '<leader>uD'
         end,
       })
-    end,
-  },
-  {
-    'folke/noice.nvim',
-    event = 'VeryLazy',
-    opts = {
-      -- add any options here
-    },
-    dependencies = {
-      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-      'MunifTanjim/nui.nvim',
-      -- OPTIONAL:
-      --   `nvim-notify` is only needed, if you want to use the notification view.
-      --   If not available, we use `mini` as the fallback
-      'rcarriga/nvim-notify',
-    },
-  },
-  {
-    'FabijanZulj/blame.nvim',
-    lazy = false,
-    config = function()
-      require('blame').setup {}
-    end,
-    opts = {
-      blame_options = { '-w' },
-    },
-  },
-  {
-    'adibhanna/laravel.nvim',
-    dependencies = {
-      'MunifTanjim/nui.nvim',
-      'nvim-lua/plenary.nvim',
-    },
-    keys = {
-      { '<leader>la', ':Artisan<cr>', desc = 'Laravel Artisan' },
-      { '<leader>lc', ':Composer<cr>', desc = 'Composer' },
-      { '<leader>lr', ':LaravelRoute<cr>', desc = 'Laravel Routes' },
-      { '<leader>lm', ':LaravelMake<cr>', desc = 'Laravel Make' },
-    },
-    config = function()
-      require('laravel').setup()
-    end,
-  },
-  {
-    {
-      'nvim-neorg/neorg',
-      lazy = false,
-      version = '*',
-      config = function()
-        require('neorg').setup {
-          load = {
-            ['core.defaults'] = {},
-            ['core.concealer'] = {},
-            ['core.dirman'] = {
-              config = {
-                workspaces = {
-                  notes = '~/Dropbox/notes',
-                },
-                default_workspace = 'notes',
-              },
-            },
-          },
-        }
-
-        vim.wo.foldlevel = 99
-        vim.wo.conceallevel = 2
-      end,
-    },
-  },
-  {
-    'windwp/nvim-ts-autotag',
-    lazy = false,
-    priority = 1000,
-    config = true,
-    -- opts = {
-    --   enable_close = true, -- Auto close tags
-    --   enable_rename = true, -- Auto rename pairs of tags
-    --   enable_close_on_slash = false, -- Auto close on trailing </
-    -- },
-  },
-
-  {
-    -- Solarized
-    'maxmx03/solarized.nvim',
-    lazy = false,
-    priority = 1000,
-    ---@type solarized.config
-    opts = {},
-    config = function(_, opts)
-      vim.o.termguicolors = true
-      vim.o.background = 'dark'
-      require('solarized').setup(opts)
-      -- vim.cmd.colorscheme 'solarized'
-      -- vim.cmd 'colorscheme solarized'
-    end,
-  },
-
-  -- Solarized Osaka
-  {
-    'craftzdog/solarized-osaka.nvim',
-    lazy = false,
-    priority = 1000,
-    opts = {},
-  },
-  -- Gruvbox-material
-  {
-    'sainnhe/gruvbox-material',
-    lazy = false,
-    priority = 1000,
-    config = function()
-      -- vim.cmd 'colorscheme gruvbox-material'
-    end,
-  },
-
-  -- Nordic theme
-  {
-    'AlexvZyl/nordic.nvim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-      -- vim.cmd 'colorscheme nordic'
-    end,
-  },
-  -- Oldworld
-  {
-    'dgox16/oldworld.nvim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-      -- vim.cmd 'colorscheme oldworld'
-    end,
-  },
-
-  -- Rose-pine
-  {
-    'rose-pine/neovim',
-    name = 'rose-pine',
-    config = function()
-      vim.cmd 'colorscheme rose-pine'
-    end,
-  },
-  {
-    'shaunsingh/nord.nvim',
-    name = 'nord',
-    config = function()
-      -- vim.cmd 'colorscheme nord'
     end,
   },
 }
