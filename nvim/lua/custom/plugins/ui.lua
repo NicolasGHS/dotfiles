@@ -67,7 +67,7 @@ return {
     'catppuccin/nvim',
     name = 'catppuccin',
     config = function()
-      vim.cmd 'colorscheme catppuccin-mocha'
+      -- vim.cmd 'colorscheme catppuccin-mocha'
     end,
   },
 
@@ -76,6 +76,14 @@ return {
     name = 'everforest',
     config = function()
       -- vim.cmd 'colorscheme everforest'
+    end,
+  },
+
+  {
+    'vague-theme/vague.nvim',
+    name = 'vague',
+    config = function()
+      vim.cmd 'colorscheme vague'
     end,
   },
 
