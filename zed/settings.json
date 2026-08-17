@@ -1,0 +1,71 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "edit_predictions": {
+    "provider": "copilot"
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    }
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "button": false,
+    "dock": "left"
+  },
+  "relative_line_numbers": "enabled",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Colored Zed Icons Theme Dark",
+    "dark": "Colored Zed Icons Theme Dark"
+  },
+  "git_panel": {
+    "scrollbar": {
+      "show": "never"
+    },
+    "show_count_badge": false,
+    "collapse_untracked_diff": false,
+    "file_icons": false,
+    "tree_view": true,
+    "status_style": "icon",
+    "dock": "left"
+  },
+  "project_panel": {
+    "scrollbar": {
+      "show": "never"
+    },
+    "starts_open": false,
+    "dock": "right"
+  },
+  "agent": {
+    "dock": "right",
+    "default_profile": "write",
+    "model_parameters": [],
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
+    }
+  },
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "ui_font_family": "Dank Mono",
+  "buffer_font_family": "Dank Mono",
+  "buffer_font_size": 14,
+  "buffer_line_height": {
+    "custom": 2.0
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "Rosé Pine Dawn",
+    "dark": "Rosé Pine Moon"
+  }
+}
